@@ -1,0 +1,69 @@
+﻿@{
+    var status = Context.Request.Query["status"];
+    var inprocess = "text-primary";
+    var pending = "text-primary";
+    var completed = "text-primary";
+    var all = "text-primary";
+
+    switch (status)
+    {
+        case "inprocess":
+            inprocess = "active text-white";
+            break;
+        case "pending":
+            pending = "active text-white";
+            break;
+        case "completed":
+            completed = "active text-white";
+            break;
+        default:
+            all = "active text-white";
+            break;
+    }
+}
+
+<div class="container p-3">
+    <div class="d-flex justify-content-between pt-4">
+        <div class="p-2">
+            <h2 class="text-primary">Orders</h2>
+        </div>
+
+        <div class="p-2">
+            <ul class="list-group list-group-horizontal-sm">
+                <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="inprocess">
+                <li class="@inprocess list-group-item">In process</li>
+                </a>
+                <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="pending">
+                <li class="@pending list-group-item">Payment Pending</li>
+                </a>
+                <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="completed">
+                <li class="@completed list-group-item">Completed</li>
+                </a>
+                <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="all">
+                <li class="@all list-group-item">All</li>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+    <br /><br />
+
+    <table id="tblData" class="table table-bordered table-striped" style="width: 100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Total</th>
+                <th></th>
+            </tr>
+        </thead>
+
+    </table>
+</div>
+
+@section Scripts {
+    <script src="~/js/order.js"></script>
+}

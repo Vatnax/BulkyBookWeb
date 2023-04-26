@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Product>
+
+<div class="row pb-3">
+    @foreach (var val in Model)
+    {
+        <div class="col-lg-3 col-md-6">
+            <div class="row p-2">
+                <div class="col-12 p-1" style="border: 1px solid #008cba; border-radius: 5px;">
+                    <div class="card">
+                        <img src="@val.ImageUrl" class="card-img-top rounded" />
+                        <div class="pl-1">
+                            <p class="card-title h5 text-primary">@val.Title</p>
+                            <p class="card-title text-secondary">@val.Author</p>
+                        </div>
+                        <div class="pl-1">
+                            <p>List Price: <strike><b>$@val.ListPrice.ToString("0.00")</b></strike></p>
+                        </div>
+                        <div class="pl-1">
+                            <p>As low as: <b>$@val.Price100.ToString("0.00")</b></p>
+                        </div>
+                    </div>
+                    <div>
+                        <a asp-action="Details" class="btn btn-primary form-control" asp-route-productId="@val.Id">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
