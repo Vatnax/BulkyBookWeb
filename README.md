@@ -11,4 +11,12 @@ An application is built upon ASP.NET Core (.NET 6) with C#. Despite the backend 
 
 ### Installation
 
+1. Click _Code_ button in my repository and copy the link.
+![1](https://imgur.com/Nn4ilIP.png)
+2. Open up Visual Studio and click _Clone a repository_.
+![2](https://i.imgur.com/wqE8lfT.png)
+3. Input the link that you've copied and setup path for storing the project.
+![3](https://i.imgur.com/vKBpksT.png)
+4. Click _Clone_.
+
 ### IT'S AN OLD PROJECT (summer 2022), THAT'S WHY IT DOESN'T HAVE MANY COMMITS!
