@@ -18,5 +18,6 @@ An application is built upon ASP.NET Core (.NET 6) with C#. Despite the backend 
 3. Input the link that you've copied and setup path for storing the project.
 ![3](https://i.imgur.com/vKBpksT.png)
 4. Click _Clone_.
+5. If needed, change a default connection string in _appsettings.json_ file.
 
 ### IT'S AN OLD PROJECT (summer 2022), THAT'S WHY IT DOESN'T HAVE MANY COMMITS!
